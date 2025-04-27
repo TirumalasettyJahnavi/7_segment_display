@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 27 18:01:00 2025
+# Process ID: 16664
+# Current directory: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14932 C:\Users\jahna\OneDrive\Documents\Verilog\segment_7\segment_7.xpr
+# Log file: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/vivado.log
+# Journal file: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source segment_7.tcl
+restart
+add_force {/segment_7/clk} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 100 ns
+restart
+add_force {/segment_7/clk} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/segment_7/an} -radix bin {0000 0ns}
+add_force {/segment_7/ca} -radix bin {0000000 0ns}
+add_force {/segment_7/ca} -radix bin {00000000 0ns}
+run 100 ns

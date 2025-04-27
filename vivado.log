@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 27 18:01:00 2025
+# Process ID: 16664
+# Current directory: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14932 C:\Users\jahna\OneDrive\Documents\Verilog\segment_7\segment_7.xpr
+# Log file: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/vivado.log
+# Journal file: C:/Users/jahna/OneDrive/Documents/Verilog/segment_7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 821.660 ; gain = 166.262
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'segment_7' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj segment_7_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.sim/sim_1/behav/xsim'
+"xelab -wto d1e517dc2d7844f5bc1d01c164e78305 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot segment_7_behav xil_defaultlib.segment_7 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d1e517dc2d7844f5bc1d01c164e78305 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot segment_7_behav xil_defaultlib.segment_7 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'value' [C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.v:42]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'value' [C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.v:43]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'value' [C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.v:44]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'value' [C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.v:45]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jahna/OneDrive/Documents/Verilog/segment_7/segment_7.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "segment_7_behav -key {Behavioral:sim_1:Functional:segment_7} -tclbatch {segment_7.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source segment_7.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 902.395 ; gain = 7.246
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'segment_7_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 902.395 ; gain = 7.246
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/segment_7/clk} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+run 100 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/segment_7/clk} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/segment_7/an} -radix bin {0000 0ns}
+add_force {/segment_7/ca} -radix bin {0000000 0ns}
+add_force {/segment_7/ca} -radix bin {00000000 0ns}
+run 100 ns
